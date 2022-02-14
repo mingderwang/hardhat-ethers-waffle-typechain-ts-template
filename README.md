@@ -40,6 +40,10 @@ Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_
 ```shell
 npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
 ```
+for example
+```
+npx hardhat verify --network rinkeby --contract contracts/BasicToken.sol:BasicToken 0x6cCBAA7D75A85569DA055219033B4Df646dBCd57 "1000"
+```
 
 # Performance optimizations
 
