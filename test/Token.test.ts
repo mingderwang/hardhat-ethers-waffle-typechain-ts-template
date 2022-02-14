@@ -11,7 +11,7 @@ describe("Token contract", function() {
     expect(ownerBalance).to.equal(supply);
   });
 
-  it("Deployment should assign the total supply of tokens to the owner", async function() {
+  it("should transfer Token work", async function() {
     await deployments.fixture(["Token"]);
     const {tokenOwner} = await getNamedAccounts();
     const users = await getUnnamedAccounts();
