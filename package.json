@@ -1,5 +1,14 @@
 {
-  "name": "hardhat-project",
+  "name": "hardhat-waffle-template-ts",
+  "version": "0.0.1",
+  "description": "A template for using waffle in hardhat",
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "npx hardhat clean",
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "coverage": "npm run build && npx hardhat coverage --temp artifacts --network coverage"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.5",
     "@nomiclabs/hardhat-etherscan": "^3.0.1",
@@ -7,6 +16,7 @@
     "@typechain/ethers-v5": "^7.2.0",
     "@typechain/hardhat": "^2.3.1",
     "@types/chai": "^4.3.0",
+    "@types/chai-as-promised": "^7.1.5",
     "@types/mocha": "^9.1.0",
     "@types/node": "^12.20.45",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
@@ -34,5 +44,6 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.5.0"
-  }
+  },
+  "license": "MIT"
 }
