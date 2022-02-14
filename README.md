@@ -60,3 +60,20 @@ deployer 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
 tokenOwner 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
 deploying "Token" (tx: 0xd6134bdc9ad09d2596d0b06d2b010b6b08697ee3da571af589e10a6dfa410514)...: deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 with 483242 gas
 ```
+
+# use chai-ethers in test
+```
+➜  hardhat-ethers-waffle-typechain-ts-template git:(main) ✗ npx hardhat test --network hardhat
+No need to generate any newer typings.
+
+
+  Token contract
+deployer 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+tokenOwner 0x70997970C51812dc3A010C7d01b50e0d17dc79C8
+    ✓ Deployment should assign the total supply of tokens to the owner (1143ms)
+    ✓ Deployment should assign the total supply of tokens to the owner (77ms)
+
+
+  2 passing (1s)
+
+```
