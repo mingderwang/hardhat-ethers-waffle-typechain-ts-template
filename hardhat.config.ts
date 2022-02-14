@@ -1,11 +1,15 @@
 import * as dotenv from "dotenv";
-
-import { HardhatUserConfig, task } from "hardhat/config";
+ 
+import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "solidity-coverage";
+
+import {HardhatUserConfig} from 'hardhat/types';
+import 'hardhat-deploy';
+import 'hardhat-deploy-ethers';
 
 dotenv.config();
 
@@ -21,13 +25,23 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 
 // default to use "hardhat", especitally for testing
 
-const defaultNetwork = "rinkeby";
+const defaultNetwork = "hardhat";
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.4",
+  solidity: {
+    compilers: [
+      {
+        version: "0.7.6",
+      },
+      {
+        version: "0.8.11",
+        settings: {},
+      },
+    ],
+  },
   defaultNetwork,
   networks: {
     ropsten: {
@@ -57,6 +71,11 @@ const config: HardhatUserConfig = {
   },
   paths: {
     artifacts: "./build",
+    sources: 'src',
+  },
+  namedAccounts: {
+    deployer: 0,
+    tokenOwner: 1,
   },
 };
 
