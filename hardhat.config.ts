@@ -48,7 +48,7 @@ const config: HardhatUserConfig = {
         version: "0.7.6",
       },
       {
-        version: "0.8.11",
+        version: "0.8.5",
         settings: {},
       },
     ],
@@ -82,7 +82,7 @@ const config: HardhatUserConfig = {
   },
   paths: {
     artifacts: "./build",
-    sources: 'src',
+    sources: './contracts',
   },
   namedAccounts: {
     deployer: 0,
