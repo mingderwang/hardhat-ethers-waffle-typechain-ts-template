@@ -1,6 +1,6 @@
 {
   "name": "hardhat-waffle-template-ts",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "A template for using waffle in hardhat",
   "scripts": {
     "deploy": "npx hardhat run scripts/deploy.ts",
